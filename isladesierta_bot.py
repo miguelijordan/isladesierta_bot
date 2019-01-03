@@ -6,7 +6,7 @@ import isladesierta
 import unidecode
 
 # CONSTANTS
-TOKEN = "608692415:AAGMY5bKpoy6QbSb2d6jqd9sGgScUCnRfrc"
+TOKEN = ""
 
 if __name__ == '__main__':
     logging.basicConfig(filename='isladesierta.log', filemode='a+', level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s: %(message)s',)
