@@ -23,6 +23,6 @@ class IslaDesierta:
         else:
             return False
 
-    def get_cosas(self, player)
+    def get_cosas(self, player):
         if player in self.players.keys():
             return self.players[player]
