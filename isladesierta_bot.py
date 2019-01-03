@@ -37,14 +37,14 @@ if __name__ == '__main__':
         ok = isla.ok(text, player.first_name)
         if ok:
             isla.add_word_player(text, player.id)
-            bot.reply_to(message, original_text + " sí te lo puedes llevar.")
+            bot.reply_to(message, player_name + " sí se puede llevar " + original_text + ".")
             if isla.player_win(player.id):
                 isla.remove_player(player.id)
                 bot.send_message(message.chat.id, "Enhorabuena " + player.first_name + "!! Podrás sobrevivir en la isla desierta con todo eso.\n"+
                 "¿Te llevarías más cosas?", parse_mode="Markdown")
         else:
             isla.remove_player(player.id)
-            bot.reply_to(message, original_text + " no te lo puedes llevar.")
+            bot.reply_to(message, player_name + " no se puede llevar " + original_text + ".")
 
     logging.info("La Isla Desierta is running...")
     bot.polling()
